@@ -1,0 +1,151 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bucket List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+            margin: 0;
+            background-color: #f0f8f9; /* Light, cool background */
+            color: #344e41; /* Deep teal text */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0077b6; /* Vibrant blue header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #023e8a; /* Darker blue headings */
+            border-bottom: 2px solid #0077b6; /* Underline */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul, ol {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 15px 0;
+            border-bottom: 1px dashed #d0d0d0; /* Dashed lines between items */
+            position: relative;
+            transition: background-color 0.3s ease; /* Smooth transition for hover */
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li::before {
+            content: "• "; /* Modern bullet */
+            color: #0077b6; /* Blue bullet color */
+            margin-right: 10px;
+        }
+
+        li.completed::before {
+            content: "✓ "; /* Checkmark for completed items */
+            color: #4caf50; /* Green checkmark */
+        }
+
+        /* Bonus Challenge - Hover Effects */
+        li:hover {
+            background-color: #e3f2fd; /* Light blue on hover */
+            cursor: pointer;
+            transform: translateX(5px); /* Subtle slide on hover */
+        }
+
+        footer {
+            background-color: #0077b6; /* Same blue as header */
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed; /* Fixed footer */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Personal Bucket List</h1>
+        <p>My Goals and Dreams</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Travel</h2>
+            <ul>
+                <li>Visit Japan</li>
+                <li>See the Northern Lights</li>
+                <li class="completed">Explore South America</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ol>
+                <li>Learn to play the guitar</li>
+                <li class="completed">Become fluent in Spanish</li>
+                <li>Master web development</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Experiences</h2>
+            <ul>
+                <li>Go skydiving</li>
+                <li>Run a marathon</li>
+                <li class="completed">Volunteer at an animal shelter</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        CREATED BY ADITYA RAJ GAURAV
+    </footer>
+
+    <script>
+        const listItems = document.querySelectorAll('li');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('completed');
+            });
+        });
+    </script>
+
+</body>
+</html>
